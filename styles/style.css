@@ -1,0 +1,532 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #1e1e1e; /* был #121212 */
+  color: white;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+nav ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: 400;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #00BFFF;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 60px;
+  gap: 60px; /* расстояние между фото и текстом */
+}
+
+.hero-image img {
+  width: 460px; /* большее фото */
+  border-radius: 12px;
+}
+
+.hero-text {
+  max-width: 460px;
+}
+
+.hero-text h1 {
+  font-size: 48px;
+  line-height: 1.3;
+  margin-bottom: 30px;
+}
+
+.underline {
+  border-bottom: 3px solid #00BFFF;
+  padding-bottom: 3px;
+}
+
+.bold {
+  font-weight: 700;
+  color: white;
+}
+
+
+.listen-on {
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: #ccc;
+}
+
+.icons img {
+  width: 245;
+height: 32;
+top: 40px;
+left: 22px;
+opacity: 1;
+
+
+}
+
+.episodes {
+  padding: 60px;
+  background-color: #1e1e1e; /* теперь фон серый */
+}
+
+
+.episodes-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.episodes-header h2 {
+  font-size: 32px;
+}
+
+.view-all {
+  background-color: #00BFFF;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+.view-all:hover {
+  background-color: #0099cc;
+}
+
+.episode-card {
+  display: flex;
+  background-color: #000000; /* теперь фон карточек — чёрный */
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+
+.episode-card img {
+  width: 240px;
+  object-fit: cover;
+}
+
+.episode-content {
+  padding: 20px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tag {
+  background-color: #2e2e2e;
+  color: #ccc;
+  font-size: 14px;
+  padding: 4px 10px;
+  border-radius: 5px;
+  display: inline-block;
+  width: fit-content;
+}
+
+.episode-number {
+  color: #00BFFF;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.episode-content h3 {
+  font-size: 24px;
+  font-weight: 600;
+  color: white;
+}
+
+.episode-content p {
+  font-size: 15px;
+  color: #ccc;
+  line-height: 1.5;
+}
+
+.episode-btn {
+  margin-top: 10px;
+  background-color: #00BFFF;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  width: fit-content;
+  transition: background 0.3s;
+}
+
+.episode-btn:hover {
+  background-color: #0099cc;
+}
+
+/* --- HOST SECTION (рядом, чёрный фон) --- */
+.host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000;
+  padding: 80px 60px;
+  gap: 40px;
+  border-radius: 20px;
+}
+
+
+.host-text {
+  max-width: 420px;
+  color: white;
+  text-align: left;
+}
+
+.icon-circle {
+  width: 40px;
+  height: 40px;
+  background-color: #00BFFF;
+  border-radius: 50%;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  line-height: 40px;
+  margin-bottom: 20px;
+}
+
+.host-subtitle {
+  color: #00BFFF;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.host-name {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.host-desc {
+  color: #cccccc;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.host-image {
+  display: flex;
+  justify-content: center;
+}
+
+.host-image img {
+  width: 300px;
+  border-radius: 12px;
+}
+
+/* --- SUBSCRIBE SECTION --- */
+.subscribe {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000000;
+  color: white;
+  padding: 60px;
+  border-radius: 20px;
+  margin: 60px;
+  gap: 60px;
+}
+
+.subscribe-left {
+  max-width: 400px;
+}
+
+.newsletter-label {
+  color: #00BFFF;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.subscribe-left h2 {
+  font-size: 36px;
+  line-height: 1.3;
+}
+
+.subscribe-right {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  flex: 1;
+}
+
+.subscribe-right input {
+  padding: 12px;
+  border-radius: 6px;
+  border: none;
+  background-color: #1e1e1e;
+  color: white;
+  font-size: 16px;
+}
+
+.subscribe-right input::placeholder {
+  color: #888;
+}
+
+.subscribe-right button {
+  background-color: #00BFFF;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  width: fit-content;
+  transition: background 0.3s;
+}
+
+.subscribe-right button:hover {
+  background-color: #0099cc;
+}
+
+.testimonials-section {
+  padding: 60px;
+  background-color: #1e1e1e;
+  color: white;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* В ряд по 3 */
+  gap: 30px;
+}
+
+.testimonial-card {
+  background-color: #000;
+  padding: 20px 24px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.stars {
+  color: #FFD700;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.quote {
+  font-size: 16px;
+  color: #ccc;
+  margin-bottom: 15px;
+}
+
+.author {
+  font-weight: bold;
+  color: white;
+}
+
+.footer {
+  background-color: #000000;
+  padding: 60px;
+  color: white;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.footer-brand h3 {
+  font-size: 28px;
+  font-weight: 700; /* жирный */
+  margin-bottom: 20px;
+  color: white;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 20px;
+  margin-right: 15px;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #00BFFF;
+}
+
+.footer-links {
+  display: flex;
+  gap: 60px;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-column a {
+  color: #cccccc;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s;
+}
+
+.footer-column a:hover {
+  color: #00BFFF;
+}
+
+.podcast-icons a {
+  color: white;
+  font-size: 20px;
+  margin-right: 15px;
+  transition: color 0.3s;
+}
+
+.podcast-icons a:hover {
+  color: #00BFFF;
+}
+
+/* --- БУРГЕР-МЕНЮ --- */
+.burger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: white;
+  z-index: 1001; /* выше меню */
+}
+
+/* --- АДАПТАЦИЯ --- */
+
+/* Планшеты */
+@media (max-width: 1024px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .hero-image img {
+    max-width: 100%;
+  }
+
+  .episodes-header {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .episode-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .host {
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .subscribe {
+    flex-direction: column;
+    gap: 30px;
+    margin: 30px;
+    text-align: center;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+}
+
+/* Мобильные */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 15px 20px;
+  }
+
+  .burger {
+    display: block;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    background: #000;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.5);
+    z-index: 1000;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  .hero-text h1 {
+    font-size: 32px;
+    line-height: 1.3;
+  }
+
+  .episodes {
+    padding: 30px 20px;
+  }
+
+  .episode-card img {
+    width: 100%;
+  }
+
+  .subscribe {
+    padding: 30px 20px;
+    margin: 20px;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .podcast-icons {
+    justify-content: center;
+  }
+}
